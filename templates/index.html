@@ -2,11 +2,12 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>내 첫 웹사이트</title>
-    <link rel="stylesheet" href="/static/css/style.css">
+    <title>내 웹사이트</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h1>안녕하세요! 🎉</h1>
-    <p>Python Flask로 만든 첫 웹사이트입니다.</p>
+    <!-- 이미지 -->
+    <img src="{{ url_for('static', filename='images/py_img.png') }}" alt="파이썬 이미지">
 </body>
 </html>
