@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Admin - 수신 메시지{% endblock %}
+
+{% block content %}
+
+    <nav>
+        <h1 class="logo">AI PORTFOLIO</h1>
+        <ul>
+            <li><a href="{{ url_for('home') }}">← 홈으로</a></li>
+        </ul>
+    </nav>
+
+    <section class="admin-section">
+
+        <h2>수신 메시지 <span class="message-count">{{ messages | length }}건</span></h2>
+
+        {% if messages %}
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>이름</th>
+                        <th>이메일</th>
+                        <th>메시지</th>
+                        <th>수신 일시</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for msg in messages %}
+                        <tr>
+                            <td>{{ msg.id }}</td>
+                            <td>{{ msg.name }}</td>
+                            <td>{{ msg.email }}</td>
+                            <td>{{ msg.message }}</td>
+                            <td>{{ msg.created_at }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p class="no-message">수신된 메시지가 없습니다.</p>
+        {% endif %}
+
+    </section>
+
+{% endblock %}

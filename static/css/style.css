@@ -1,0 +1,476 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0b0f1a;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* 네비게이션 */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 50px;
+
+    background-color: #111827;
+}
+
+.logo {
+    color: #00f7ff;
+
+    text-shadow: 0 0 10px #00f7ff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00f7ff;
+}
+
+/* 메인 */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 100px 10%;
+}
+
+.hero-text h2 {
+    font-size: 60px;
+    color: #00f7ff;
+
+    text-shadow: 0 0 20px #00f7ff;
+}
+
+.hero-text p {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #cbd5e1;
+}
+
+.hero button {
+
+    margin-top: 30px;
+
+    padding: 15px 30px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #00f7ff;
+
+    color: black;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.hero button:hover {
+
+    transform: scale(1.05);
+
+    box-shadow: 0 0 20px #00f7ff;
+}
+
+/* 이미지 */
+
+.hero-image img {
+
+    width: 320px;
+    height: 320px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 4px solid #00f7ff;
+
+    box-shadow: 0 0 30px #00f7ff;
+}
+
+/* 기술 스택 */
+
+.skills {
+
+    padding: 80px 10%;
+}
+
+.skills h2 {
+
+    margin-bottom: 40px;
+
+    color: #00f7ff;
+}
+
+.skill-container {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+.skill-card {
+
+    padding: 20px 30px;
+
+    background-color: #111827;
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+
+    border: 1px solid #00f7ff;
+}
+
+.skill-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 0 20px #00f7ff;
+}
+
+/* 프로젝트 */
+
+.projects {
+
+    padding: 80px 10%;
+}
+
+.projects h2 {
+
+    margin-bottom: 40px;
+
+    color: #00f7ff;
+}
+
+.project-grid {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 30px;
+}
+
+.project-card {
+
+    background-color: #111827;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 0 20px #00f7ff;
+}
+
+.project-card h3 {
+
+    color: #00f7ff;
+
+    margin-bottom: 15px;
+}
+
+/* 연락처 */
+
+.contact {
+
+    padding: 80px 10%;
+
+    text-align: center;
+}
+
+.contact h2 {
+
+    margin-bottom: 30px;
+
+    color: #00f7ff;
+}
+
+/* 연락처 정보 */
+
+.contact-info {
+    margin-bottom: 40px;
+    color: #cbd5e1;
+    line-height: 2;
+}
+
+/* 연락처 폼 */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px 20px;
+    background-color: #111827;
+    border: 1px solid #00f7ff44;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #00f7ff;
+    box-shadow: 0 0 10px #00f7ff44;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: #00f7ff;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00f7ff;
+}
+
+/* 기술 태그 */
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.tag {
+    padding: 4px 12px;
+    background-color: #00f7ff22;
+    border: 1px solid #00f7ff66;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #00f7ff;
+}
+
+/* 프로젝트 링크 */
+
+.project-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #00f7ff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.project-link:hover {
+    text-shadow: 0 0 10px #00f7ff;
+}
+
+/* 플래시 메시지 */
+
+.flash-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.flash {
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    animation: fadeIn 0.3s ease;
+    min-width: 250px;
+}
+
+.flash-success {
+    background-color: #00f7ff22;
+    border: 1px solid #00f7ff;
+    color: #00f7ff;
+}
+
+.flash-error {
+    background-color: #ff444422;
+    border: 1px solid #ff4444;
+    color: #ff4444;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* 에러 페이지 */
+
+.error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    text-align: center;
+    padding: 40px;
+}
+
+.error-code {
+    font-size: 120px;
+    color: #00f7ff;
+    text-shadow: 0 0 30px #00f7ff;
+    line-height: 1;
+}
+
+.error-message {
+    font-size: 22px;
+    color: #cbd5e1;
+    margin: 20px 0 40px;
+}
+
+.error-page a button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: #00f7ff;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.error-page a button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00f7ff;
+}
+
+/* 날씨 위젯 */
+
+.weather-widget {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    background-color: #1e293b;
+    border: 1px solid #00f7ff44;
+    border-radius: 30px;
+    cursor: default;
+    transition: 0.3s;
+}
+
+.weather-widget:hover {
+    border-color: #00f7ff;
+    box-shadow: 0 0 10px #00f7ff44;
+}
+
+.weather-widget #weather-icon {
+    font-size: 22px;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+
+#weather-temp {
+    font-size: 15px;
+    color: #00f7ff;
+    font-weight: bold;
+}
+
+#weather-desc {
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+/* 관리자 페이지 */
+
+.admin-section {
+    padding: 80px 10%;
+}
+
+.admin-section h2 {
+    color: #00f7ff;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+.message-count {
+    font-size: 16px;
+    color: #94a3b8;
+    font-weight: normal;
+    margin-left: 12px;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1px solid #1e293b;
+}
+
+.admin-table th {
+    background-color: #111827;
+    color: #00f7ff;
+    font-weight: bold;
+}
+
+.admin-table tr:hover td {
+    background-color: #111827;
+}
+
+.admin-table td {
+    color: #cbd5e1;
+    vertical-align: top;
+}
+
+.no-message {
+    color: #94a3b8;
+    font-size: 16px;
+}
